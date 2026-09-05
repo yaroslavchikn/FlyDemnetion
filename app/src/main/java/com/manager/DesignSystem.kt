@@ -97,9 +97,9 @@ fun FBack(
     val w = size.width
     val h = size.height
 
-    drawLine(color, Offset(w * 0.78f, h * 0.5f), Offset(w * 0.22f, h * 0.5f), stroke)
-    drawLine(color, Offset(w * 0.44f, h * 0.28f), Offset(w * 0.22f, h * 0.5f), stroke)
-    drawLine(color, Offset(w * 0.44f, h * 0.72f), Offset(w * 0.22f, h * 0.5f), stroke)
+    drawLine(color, Offset(w * 0.78f, h * 0.5f), Offset(w * 0.22f, h * 0.5f), style = stroke)
+    drawLine(color, Offset(w * 0.44f, h * 0.28f), Offset(w * 0.22f, h * 0.5f), style = stroke)
+    drawLine(color, Offset(w * 0.44f, h * 0.72f), Offset(w * 0.22f, h * 0.5f), style = stroke)
 }
 
 @Composable
@@ -111,8 +111,8 @@ fun FClose(
     val w = size.width
     val h = size.height
 
-    drawLine(color, Offset(w * 0.24f, h * 0.24f), Offset(w * 0.76f, h * 0.76f), stroke)
-    drawLine(color, Offset(w * 0.76f, h * 0.24f), Offset(w * 0.24f, h * 0.76f), stroke)
+    drawLine(color, Offset(w * 0.24f, h * 0.24f), Offset(w * 0.76f, h * 0.76f), style = stroke)
+    drawLine(color, Offset(w * 0.76f, h * 0.24f), Offset(w * 0.24f, h * 0.76f), style = stroke)
 }
 
 @Composable
@@ -134,8 +134,7 @@ fun FSearch(
         color = color,
         start = Offset(size.width * 0.60f, size.height * 0.60f),
         end = Offset(size.width * 0.84f, size.height * 0.84f),
-        strokeWidth = stroke.width,
-        cap = stroke.cap
+        style = stroke
     )
 }
 
@@ -165,13 +164,13 @@ fun FList(
     val h = size.height
 
     drawCircle(color, Offset(w * 0.18f, h * 0.28f), w * 0.045f)
-    drawLine(color, Offset(w * 0.32f, h * 0.28f), Offset(w * 0.84f, h * 0.28f), stroke)
+    drawLine(color, Offset(w * 0.32f, h * 0.28f), Offset(w * 0.84f, h * 0.28f), style = stroke)
 
     drawCircle(color, Offset(w * 0.18f, h * 0.5f), w * 0.045f)
-    drawLine(color, Offset(w * 0.32f, h * 0.5f), Offset(w * 0.84f, h * 0.5f), stroke)
+    drawLine(color, Offset(w * 0.32f, h * 0.5f), Offset(w * 0.84f, h * 0.5f), style = stroke)
 
     drawCircle(color, Offset(w * 0.18f, h * 0.72f), w * 0.045f)
-    drawLine(color, Offset(w * 0.32f, h * 0.72f), Offset(w * 0.84f, h * 0.72f), stroke)
+    drawLine(color, Offset(w * 0.32f, h * 0.72f), Offset(w * 0.84f, h * 0.72f), style = stroke)
 }
 
 @Composable
@@ -183,9 +182,9 @@ fun FSort(
     val w = size.width
     val h = size.height
 
-    drawLine(color, Offset(w * 0.18f, h * 0.3f), Offset(w * 0.82f, h * 0.3f), stroke)
-    drawLine(color, Offset(w * 0.18f, h * 0.5f), Offset(w * 0.66f, h * 0.5f), stroke)
-    drawLine(color, Offset(w * 0.18f, h * 0.7f), Offset(w * 0.5f, h * 0.7f), stroke)
+    drawLine(color, Offset(w * 0.18f, h * 0.3f), Offset(w * 0.82f, h * 0.3f), style = stroke)
+    drawLine(color, Offset(w * 0.18f, h * 0.5f), Offset(w * 0.66f, h * 0.5f), style = stroke)
+    drawLine(color, Offset(w * 0.18f, h * 0.7f), Offset(w * 0.5f, h * 0.7f), style = stroke)
 }
 
 @Composable
@@ -209,8 +208,8 @@ fun FFolderPlus(
 
     drawPath(path, color, style = stroke)
 
-    drawLine(color, Offset(w * 0.5f, h * 0.48f), Offset(w * 0.5f, h * 0.64f), stroke)
-    drawLine(color, Offset(w * 0.42f, h * 0.56f), Offset(w * 0.58f, h * 0.56f), stroke)
+    drawLine(color, Offset(w * 0.5f, h * 0.48f), Offset(w * 0.5f, h * 0.64f), style = stroke)
+    drawLine(color, Offset(w * 0.42f, h * 0.56f), Offset(w * 0.58f, h * 0.56f), style = stroke)
 }
 
 @Composable
@@ -253,8 +252,8 @@ fun FFile(
     }
 
     drawPath(path, color, style = stroke)
-    drawLine(color, Offset(w * 0.6f, h * 0.14f), Offset(w * 0.6f, h * 0.28f), stroke)
-    drawLine(color, Offset(w * 0.6f, h * 0.28f), Offset(w * 0.74f, h * 0.28f), stroke)
+    drawLine(color, Offset(w * 0.6f, h * 0.14f), Offset(w * 0.6f, h * 0.28f), style = stroke)
+    drawLine(color, Offset(w * 0.6f, h * 0.28f), Offset(w * 0.74f, h * 0.28f), style = stroke)
 }
 
 @Composable
@@ -339,7 +338,7 @@ fun FAudioFile(
 
     drawPath(path, color, style = stroke)
     drawCircle(color, Offset(w * 0.43f, h * 0.62f), w * 0.06f)
-    drawLine(color, Offset(w * 0.49f, h * 0.62f), Offset(w * 0.56f, h * 0.38f), stroke)
+    drawLine(color, Offset(w * 0.49f, h * 0.62f), Offset(w * 0.56f, h * 0.38f), style = stroke)
 }
 
 @Composable
@@ -364,8 +363,8 @@ fun FTrash(
     val w = size.width
     val h = size.height
 
-    drawLine(color, Offset(w * 0.2f, h * 0.28f), Offset(w * 0.8f, h * 0.28f), stroke)
-    drawLine(color, Offset(w * 0.4f, h * 0.2f), Offset(w * 0.6f, h * 0.2f), stroke)
+    drawLine(color, Offset(w * 0.2f, h * 0.28f), Offset(w * 0.8f, h * 0.28f), style = stroke)
+    drawLine(color, Offset(w * 0.4f, h * 0.2f), Offset(w * 0.6f, h * 0.2f), style = stroke)
 
     drawRoundRect(
         color = color,
@@ -375,8 +374,8 @@ fun FTrash(
         style = stroke
     )
 
-    drawLine(color, Offset(w * 0.42f, h * 0.4f), Offset(w * 0.42f, h * 0.68f), thin)
-    drawLine(color, Offset(w * 0.58f, h * 0.4f), Offset(w * 0.58f, h * 0.68f), thin)
+    drawLine(color, Offset(w * 0.42f, h * 0.4f), Offset(w * 0.42f, h * 0.68f), style = thin)
+    drawLine(color, Offset(w * 0.58f, h * 0.4f), Offset(w * 0.58f, h * 0.68f), style = thin)
 }
 
 @Composable
@@ -398,8 +397,8 @@ fun FRestore(
         style = stroke
     )
 
-    drawLine(color, Offset(w * 0.66f, h * 0.18f), Offset(w * 0.78f, h * 0.24f), stroke)
-    drawLine(color, Offset(w * 0.78f, h * 0.24f), Offset(w * 0.68f, h * 0.34f), stroke)
+    drawLine(color, Offset(w * 0.66f, h * 0.18f), Offset(w * 0.78f, h * 0.24f), style = stroke)
+    drawLine(color, Offset(w * 0.78f, h * 0.24f), Offset(w * 0.68f, h * 0.34f), style = stroke)
 }
 
 @Composable
@@ -412,8 +411,8 @@ fun FDeleteForever(
     val w = size.width
     val h = size.height
 
-    drawLine(color, Offset(w * 0.2f, h * 0.28f), Offset(w * 0.8f, h * 0.28f), stroke)
-    drawLine(color, Offset(w * 0.4f, h * 0.2f), Offset(w * 0.6f, h * 0.2f), stroke)
+    drawLine(color, Offset(w * 0.2f, h * 0.28f), Offset(w * 0.8f, h * 0.28f), style = stroke)
+    drawLine(color, Offset(w * 0.4f, h * 0.2f), Offset(w * 0.6f, h * 0.2f), style = stroke)
 
     drawRoundRect(
         color = color,
@@ -423,8 +422,8 @@ fun FDeleteForever(
         style = stroke
     )
 
-    drawLine(color, Offset(w * 0.42f, h * 0.44f), Offset(w * 0.58f, h * 0.62f), thin)
-    drawLine(color, Offset(w * 0.58f, h * 0.44f), Offset(w * 0.42f, h * 0.62f), thin)
+    drawLine(color, Offset(w * 0.42f, h * 0.44f), Offset(w * 0.58f, h * 0.62f), style = thin)
+    drawLine(color, Offset(w * 0.58f, h * 0.44f), Offset(w * 0.42f, h * 0.62f), style = thin)
 }
 
 @Composable
@@ -462,9 +461,9 @@ fun FMove(
     val w = size.width
     val h = size.height
 
-    drawLine(color, Offset(w * 0.16f, h * 0.5f), Offset(w * 0.76f, h * 0.5f), stroke)
-    drawLine(color, Offset(w * 0.6f, h * 0.34f), Offset(w * 0.76f, h * 0.5f), stroke)
-    drawLine(color, Offset(w * 0.6f, h * 0.66f), Offset(w * 0.76f, h * 0.5f), stroke)
+    drawLine(color, Offset(w * 0.16f, h * 0.5f), Offset(w * 0.76f, h * 0.5f), style = stroke)
+    drawLine(color, Offset(w * 0.6f, h * 0.34f), Offset(w * 0.76f, h * 0.5f), style = stroke)
+    drawLine(color, Offset(w * 0.6f, h * 0.66f), Offset(w * 0.76f, h * 0.5f), style = stroke)
 }
 
 @Composable
@@ -501,8 +500,8 @@ fun FShare(
     drawCircle(color, Offset(w * 0.7f, h * 0.3f), w * 0.08f)
     drawCircle(color, Offset(w * 0.7f, h * 0.7f), w * 0.08f)
 
-    drawLine(color, Offset(w * 0.37f, h * 0.46f), Offset(w * 0.62f, h * 0.34f), stroke)
-    drawLine(color, Offset(w * 0.37f, h * 0.54f), Offset(w * 0.62f, h * 0.66f), stroke)
+    drawLine(color, Offset(w * 0.37f, h * 0.46f), Offset(w * 0.62f, h * 0.34f), style = stroke)
+    drawLine(color, Offset(w * 0.37f, h * 0.54f), Offset(w * 0.62f, h * 0.66f), style = stroke)
 }
 
 @Composable
@@ -515,7 +514,7 @@ fun FInfo(
     val h = size.height
 
     drawCircle(color, Offset(w * 0.5f, h * 0.5f), minOf(w, h) * 0.34f, style = stroke)
-    drawLine(color, Offset(w * 0.5f, h * 0.44f), Offset(w * 0.5f, h * 0.68f), stroke)
+    drawLine(color, Offset(w * 0.5f, h * 0.44f), Offset(w * 0.5f, h * 0.68f), style = stroke)
     drawCircle(color, Offset(w * 0.5f, h * 0.32f), w * 0.035f)
 }
 
@@ -536,8 +535,8 @@ fun FSelectAll(
         style = stroke
     )
 
-    drawLine(color, Offset(w * 0.34f, h * 0.52f), Offset(w * 0.46f, h * 0.64f), stroke)
-    drawLine(color, Offset(w * 0.46f, h * 0.64f), Offset(w * 0.68f, h * 0.38f), stroke)
+    drawLine(color, Offset(w * 0.34f, h * 0.52f), Offset(w * 0.46f, h * 0.64f), style = stroke)
+    drawLine(color, Offset(w * 0.46f, h * 0.64f), Offset(w * 0.68f, h * 0.38f), style = stroke)
 }
 
 @Composable
@@ -563,8 +562,8 @@ fun FCheck(
     val w = size.width
     val h = size.height
 
-    drawLine(color, Offset(w * 0.2f, h * 0.52f), Offset(w * 0.42f, h * 0.72f), stroke)
-    drawLine(color, Offset(w * 0.42f, h * 0.72f), Offset(w * 0.8f, h * 0.3f), stroke)
+    drawLine(color, Offset(w * 0.2f, h * 0.52f), Offset(w * 0.42f, h * 0.72f), style = stroke)
+    drawLine(color, Offset(w * 0.42f, h * 0.72f), Offset(w * 0.8f, h * 0.3f), style = stroke)
 }
 
 @Composable
@@ -576,8 +575,8 @@ fun FChevron(
     val w = size.width
     val h = size.height
 
-    drawLine(color, Offset(w * 0.38f, h * 0.28f), Offset(w * 0.62f, h * 0.5f), stroke)
-    drawLine(color, Offset(w * 0.62f, h * 0.5f), Offset(w * 0.38f, h * 0.72f), stroke)
+    drawLine(color, Offset(w * 0.38f, h * 0.28f), Offset(w * 0.62f, h * 0.5f), style = stroke)
+    drawLine(color, Offset(w * 0.62f, h * 0.5f), Offset(w * 0.38f, h * 0.72f), style = stroke)
 }
 
 @Composable
@@ -589,9 +588,9 @@ fun FUp(
     val w = size.width
     val h = size.height
 
-    drawLine(color, Offset(w * 0.5f, h * 0.78f), Offset(w * 0.5f, h * 0.24f), stroke)
-    drawLine(color, Offset(w * 0.3f, h * 0.42f), Offset(w * 0.5f, h * 0.24f), stroke)
-    drawLine(color, Offset(w * 0.7f, h * 0.42f), Offset(w * 0.5f, h * 0.24f), stroke)
+    drawLine(color, Offset(w * 0.5f, h * 0.78f), Offset(w * 0.5f, h * 0.24f), style = stroke)
+    drawLine(color, Offset(w * 0.3f, h * 0.42f), Offset(w * 0.5f, h * 0.24f), style = stroke)
+    drawLine(color, Offset(w * 0.7f, h * 0.42f), Offset(w * 0.5f, h * 0.24f), style = stroke)
 }
 
 @Composable
@@ -611,7 +610,7 @@ fun FPhone(
         style = stroke
     )
 
-    drawLine(color, Offset(w * 0.44f, h * 0.78f), Offset(w * 0.56f, h * 0.78f), stroke)
+    drawLine(color, Offset(w * 0.44f, h * 0.78f), Offset(w * 0.56f, h * 0.78f), style = stroke)
 }
 
 @Composable
